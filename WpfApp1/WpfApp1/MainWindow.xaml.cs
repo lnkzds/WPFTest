@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,16 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        Class1 c; 
         public MainWindow()
         {
             InitializeComponent();
+            c = new Class1();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("帅啊兄弟");
+            MessageBox.Show(c.run());
         }
     }
 }
